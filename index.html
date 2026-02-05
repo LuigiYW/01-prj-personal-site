@@ -2,10 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luigi Ying Wu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- HEADER - Navigation bar at the top -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Luigi Ying Wu</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION - Introduction -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="img/Cat.jpg" alt="Cat" class="hero-cat">
+        <h1>Hi, I'm a Web Developer</h1>
+        <p>Learning HTML, CSS, and building amazing projects</p>
+        <a href="#contact" class="cta-button">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          Hey, I'm an NYU student learning web development with the assistance of AI tools. 
+          I'm passionate about creating beautiful and functional websites. 
+          This is my personal portfolio where I showcase the projects I've built.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+      <h2>My Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>HTML</h3>
+          <p>Building the structure of web pages</p>
+        </div>
+        <div class="skill-card">
+          <h3>CSS</h3>
+          <p>Designing beautiful layouts and styles</p>
+        </div>
+        <div class="skill-card">
+          <h3>JavaScript</h3>
+          <p>Adding interactivity to websites</p>
+        </div>
+        <div class="skill-card">
+          <h3>Web Design</h3>
+          <p>Creating responsive and user-friendly designs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+      <h2>My Projects</h2>
+      <div class="projects-content">
+        <p>Come back later to see my amazing projects!</p>
+      </div>
+    </section>
+
+    <!-- FAVORITE SINGER SECTION -->
+    <section id="favorites" class="singer">
+      <h2>My Favorite Singer</h2>
+      <div class="singer-container">
+        <div class="singer-card">
+          <img src="img/beabadoobee.png" alt="Beabadoobee" class="singer-image">
+          <h3>Beabadoobee</h3>
+          <p>An inspiring indie artist whose music motivates my creative journey</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-content">
+        <p>Feel free to connect with me on GitHub!</p>
+        <div class="contact-info">
+          <a href="https://github.com/LuigiYW" target="_blank" class="github-link">
+            <img src="img/github.png" alt="GitHub" class="github-icon">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

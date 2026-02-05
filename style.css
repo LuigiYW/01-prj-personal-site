@@ -1,1 +1,485 @@
-/* Add you CSS here */
+/* ===== GENERAL STYLES ===== */
+/* These styles apply to the whole page */
+
+* {
+  /* Reset default margins and padding */
+  margin: 0;
+  padding: 0;
+  /* Use border-box for easier sizing */
+  box-sizing: border-box;
+}
+
+body {
+  /* Use a clean modern font */
+  font-family: 'Arial', sans-serif;
+  /* White text for contrast */
+  color: #3f2e3e;
+  /* Soft blush background */
+  background-color: #fff3f7;
+  /* Line height makes text more readable */
+  line-height: 1.6;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+
+header {
+  /* Stick the header to the top */
+  position: sticky;
+  top: 0;
+  /* Soft blush background for the navigation */
+  background-color: #fff3f7;
+  /* Add a subtle shadow underneath */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Keep it above other content when scrolling */
+  z-index: 100;
+}
+
+.navbar {
+  /* Use flexbox to arrange items in a row */
+  display: flex;
+  /* Spread items apart */
+  justify-content: space-between;
+  /* Center items vertically */
+  align-items: center;
+  /* Add padding for breathing room */
+  padding: 0.7rem 1.4rem;
+  /* Set a max width for the page */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  /* Style the site title */
+  font-size: 1.5rem;
+  /* White text for logo */
+  color: #3f2e3e;
+  /* Remove default heading margin */
+  margin: 0;
+}
+
+.nav-links {
+  /* Remove bullet points from list */
+  list-style: none;
+  /* Use flexbox to arrange links in a row */
+  display: flex;
+  /* Add space between links */
+  gap: 2rem;
+}
+
+.nav-links a {
+  /* Remove underline from links */
+  text-decoration: none;
+  /* White text for links */
+  color: #3f2e3e;
+  /* Add a smooth color transition on hover */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  /* Change color when hovering over a link */
+  color: #ff8fb2;
+}
+
+/* ===== HERO SECTION ===== */
+/* The big welcome section at the top */
+
+.hero {
+  /* Center the content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Make it tall and eye-catching */
+  height: 500px;
+  /* Pastel gradient background for visual interest */
+  background: linear-gradient(135deg, #ffd6e8 0%, #cfe9ff 100%);
+  /* White text on colored background */
+  color: #3f2e3e;
+  /* Center the text */
+  text-align: center;
+  /* Add some padding */
+  padding: 1.4rem;
+}
+
+.hero-content h1 {
+  /* Large heading for the hero */
+  font-size: 3rem;
+  /* Add space below the heading */
+  margin-bottom: 1rem;
+}
+
+.hero-cat {
+  /* Cat image above the heading */
+  width: 200px;
+  height: 200px;
+  /* Round the image */
+  border-radius: 50%;
+  /* Space below the cat */
+  margin-bottom: 1rem;
+  /* Make image fit nicely */
+  object-fit: cover;
+}
+
+.hero-content p {
+  /* Medium text size for subtitle */
+  font-size: 1.3rem;
+  /* Space below the paragraph */
+  margin-bottom: 2rem;
+}
+
+/* ===== BUTTONS ===== */
+
+.cta-button {
+  /* Make the link look like a button */
+  display: inline-block;
+  /* Add padding inside the button */
+  padding: 0.56rem 1.4rem;
+  /* Rounded corners for modern look */
+  border-radius: 5px;
+  /* Pastel purple background for button */
+  background-color: #d7c6ff;
+  /* Dark text on light button */
+  color: #3f2e3e;
+  /* Remove underline */
+  text-decoration: none;
+  /* Add smooth hover effect */
+  transition: background-color 0.3s ease;
+  /* Bold text for buttons */
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  /* Slightly darker on hover */
+  background-color: #c4b0ff;
+}
+
+/* ===== SECTIONS - GENERAL ===== */
+/* Common styles for all content sections */
+
+section {
+  /* Add padding for breathing room */
+  padding: 2.8rem 1.4rem;
+  /* Center the content and set max width */
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Add space between sections */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  /* Make section headings stand out */
+  font-size: 2.5rem;
+  /* White text for headings */
+  color: #3f2e3e;
+  /* Space below heading */
+  margin-bottom: 2rem;
+  /* Center the heading */
+  text-align: center;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+  /* Match the hero background */
+  background: linear-gradient(135deg, #ffd6e8 0%, #cfe9ff 100%);
+  /* Reduce bottom margin for less gap with skills */
+  margin-bottom: 1rem;
+}
+
+.about-content {
+  /* Space for paragraphs */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  /* Space between paragraphs */
+  margin-bottom: 1.5rem;
+  /* Larger text for readability */
+  font-size: 1.1rem;
+  /* Line up the text from the left */
+  text-align: left;
+}
+
+/* ===== SKILLS SECTION ===== */
+
+.skills {
+  /* Match the hero background */
+  background: linear-gradient(135deg, #ffd6e8 0%, #cfe9ff 100%);
+  /* Reduce top margin for less gap with about */
+  margin-top: 1rem;
+}
+
+.skills-container {
+  /* Use flexbox to arrange skill cards in a row */
+  display: flex;
+  /* Allow wrapping on smaller screens */
+  flex-wrap: wrap;
+  /* Space between cards */
+  gap: 2rem;
+  /* Center the cards */
+  justify-content: center;
+}
+
+.skill-card {
+  /* Cards are smaller on mobile */
+  flex: 1;
+  /* Minimum width for cards */
+  min-width: 200px;
+  /* Maximum width for cards */
+  max-width: 250px;
+  /* Pastel purple background for each card */
+  background-color: #d7c6ff;
+  /* Padding inside the card */
+  padding: 1.4rem;
+  /* Rounded corners */
+  border-radius: 8px;
+  /* Subtle shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* Center text in the card */
+  text-align: center;
+  /* Smooth transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  /* Lift the card slightly on hover */
+  transform: translateY(-5px);
+  /* Make shadow darker on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+  /* Style for skill title */
+  color: #5b3a4c;
+  /* Space below title */
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  /* Light text for description */
+  color: #5b3a4c;
+}
+
+.skill-icon {
+  /* Icon size */
+  width: 80px;
+  /* Icon height */
+  height: 80px;
+  /* Space below icon */
+  margin-bottom: 1rem;
+  /* Smooth transition for hover effect */
+  transition: transform 0.3s ease;
+  /* Fix blurry icons with crisp rendering */
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.skill-card:hover .skill-icon {
+  /* Rotate icon slightly on hover */
+  transform: scale(1.1);
+}
+
+/* ===== PROJECTS SECTION ===== */
+
+.projects {
+  /* Match the hero background */
+  background: linear-gradient(135deg, #ffd6e8 0%, #cfe9ff 100%);
+}
+
+.projects-content {
+  /* Center the content */
+  max-width: 800px;
+  margin: 0 auto;
+  /* Center the text */
+  text-align: center;
+  /* Add padding */
+  padding: 1.4rem;
+}
+
+.projects-content p {
+  /* Large text for the message */
+  font-size: 1.2rem;
+  /* Light text color */
+  color: #5b3a4c;
+}
+
+/* ===== SINGER SECTION ===== */
+
+.singer {
+  /* Match the hero background */
+  background: linear-gradient(135deg, #ffd6e8 0%, #cfe9ff 100%);
+}
+
+.singer-container {
+  /* Center the single singer card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singer-card {
+  /* Single card centered */
+  max-width: 400px;
+  /* Pastel purple background */
+  background-color: #d7c6ff;
+  /* Rounded corners */
+  border-radius: 8px;
+  /* Padding inside */
+  padding: 1.05rem;
+  /* Shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* Smooth transition for hover */
+  transition: transform 0.3s ease;
+  /* Center text in card */
+  text-align: center;
+}
+
+.singer-card:hover {
+  /* Lift card on hover */
+  transform: translateY(-5px);
+}
+
+.singer-image {
+  /* Image display */
+  width: 100%;
+  /* Max height for the image */
+  max-height: 300px;
+  /* Rounded corners for image */
+  border-radius: 8px;
+  /* Space below image */
+  margin-bottom: 1rem;
+  /* Make images fit nicely */
+  object-fit: cover;
+}
+
+.singer-card h3 {
+  /* Color for singer names */
+  color: #5b3a4c;
+  /* Space below name */
+  margin-bottom: 0.5rem;
+}
+
+.singer-card p {
+  /* Light text for description */
+  color: #5b3a4c;
+  /* Smaller text for descriptions */
+  font-size: 0.95rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+.contact {
+  /* Match the hero background */
+  background: linear-gradient(135deg, #ffd6e8 0%, #cfe9ff 100%);
+}
+
+.contact-content {
+  /* Center the content */
+  max-width: 600px;
+  margin: 0 auto;
+  /* Center the text */
+  text-align: center;
+}
+
+.contact-content p {
+  /* Space between paragraphs */
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  /* Space above contact info */
+  margin-top: 2rem;
+  /* Make it a square box */
+  width: 200px;
+  height: 200px;
+  /* Pastel purple background for the info box */
+  background-color: #d7c6ff;
+  /* Padding inside the box */
+  padding: 1.4rem;
+  /* Rounded corners */
+  border-radius: 8px;
+  /* Shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* Center the GitHub link */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Center the box itself */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.github-link {
+  /* Remove link styling */
+  text-decoration: none;
+  /* Add smooth transition on hover */
+  transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+  /* Scale up slightly on hover */
+  transform: scale(1.1);
+}
+
+.github-icon {
+  /* Icon size */
+  width: 100px;
+  height: 100px;
+  /* Make it look nice */
+  object-fit: contain;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  /* Pastel purple background for footer */
+  background-color: #d7c6ff;
+  /* Dark text on light background */
+  color: #3f2e3e;
+  /* Center the text */
+  text-align: center;
+  /* Padding inside footer */
+  padding: 1.4rem;
+  /* Space above footer */
+  margin-top: 3rem;
+}
+
+footer p {
+  /* Remove default paragraph margin */
+  margin: 0;
+}
+
+/* ===== RESPONSIVE DESIGN FOR MOBILE ===== */
+/* These styles apply on smaller screens */
+
+@media (max-width: 768px) {
+  /* Stack navigation vertically on mobile */
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Make hero section text smaller on mobile */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    height: 350px;
+  }
+
+  /* Stack cards vertically on mobile */
+  .skills-container,
+  .singer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card,
+  .singer-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
